@@ -1,4 +1,5 @@
 ---
+/* Her henter man sine astro props, som referere til index filens props */
 const { url="#", cardimage="", cardimagealt="", badgenyt="false", badgerabat="false", 
 badgefaatilbage="false", cardtekst="", cardbuttontekst="Køb nu!", cardtitel="" } = Astro.props;
 
@@ -27,3 +28,5 @@ badgefaatilbage="false", cardtekst="", cardbuttontekst="Køb nu!", cardtitel="" 
 
 <!-- 2. <article> er kortet og indeholder de props vi har defineret i const. -->
 <!-- 3. <figure> er billedet og <img> er selve billedet. src={cardimage} henter det billede vi har-->
+
+<!-- Note til astro props: det er astro props der er skrevet inde i {} -->
