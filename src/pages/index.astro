@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import ProductCard from "../components/ProductCard.astro";
 ---
 <MainLayout title="La Oranique" class="">
 <section id="hero" class="min-h-[66vh] mb-8 md:mb-24 lg:mb-32 w-full max-w-screen overflow-x-hidden">
@@ -46,109 +46,96 @@ import thumbsup from "../assets/images/thumbsup.png";
 <section id="tørstig" class="lg:mb-32 max-w-6xl ml-auto mr-auto">
 	<h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Tørstig efter en flaske?</h2>
 	<div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4 p-2">
-	  <div class="card bg-base-100 border border-base-300 md:w-full sm:w-auto shadow-sm">
-		<figure>
-		  <img src="/cardimg.jpg" alt="wine" class="w-full" />
-		</figure>
-		<div class="card-body">
-		  <h2 class="card-title">Le Orangevin</h2>
-		  <p>Populær for sine søde druer.</p>
-		  <div class="card-actions justify-end">
-			<button class="btn btn-secondary">Køb nu!</button>
-		  </div>
-		</div>
-	  </div>
+	 <ProductCard
+	 url="/singleview"
+	 cardimage="/cardimg.jpg"
+	 cardimagealt="Orange wine"
+	 cardtitel="Orangevin"
+	 cardtekst="Populær for sine søde druer"
+	 cardbuttontekst="Køb nu!"
+	 badgenyt="true"
+	 badgerabat="false"
+	 badgefaatilbage="false"
+	 ></ProductCard>
+
+	 <ProductCard
+	 url="/singleview"
+	 cardimage="/product2.jpg"
+	 cardimagealt="Summer Orange"
+	 cardtitel="Summer vin"
+	 cardtekst="Fra Østrigs varme kilder"
+	 cardbuttontekst="Køb nu!"
+	 badgenyt="false"
+	 badgerabat=""
+	 badgefaatilbage="false"
+	 ></ProductCard>
   
-	  <div class="card bg-base-100 border border-base-300 w-full shadow-sm">
-		<figure>
-		  <img src="/cardimg.jpg" alt="wine" class="w-full" />
-		</figure>
-		<div class="card-body">
-		  <h2 class="card-title">Le Orangevin</h2>
-		  <p>Populær for sine søde druer.</p>
-		  <div class="card-actions justify-end">
-			<button class="btn btn-secondary">Køb nu!</button>
-		  </div>
-		</div>
-	  </div>
+	 <ProductCard
+	 url="/singleview"
+	 cardimage="/product3.jpg"
+	 cardimagealt="Orange wine"
+	 cardtitel="Wine yard vin"
+	 cardtekst="Fra vingården i Hvidovre Strand"
+	 cardbuttontekst="Køb nu!"
+	 badgenyt="false"
+	 badgerabat="false"
+	 badgefaatilbage="true"
+	 ></ProductCard>
+
+	 <ProductCard
+	 url="/singleview"
+	 cardimage="/product4.jpg"
+	 cardimagealt="Orange wine"
+	 cardtitel="Bryllupsvin"
+	 cardtekst="Lad dine gæster nyde den søde drue"
+	 cardbuttontekst="Køb nu!"
+	 ></ProductCard>
   
-	  <div class="card bg-base-100 border border-base-300 w-full shadow-sm">
-		<figure>
-		  <img src="/cardimg.jpg" alt="wine" class="w-full" />
-		</figure>
-		<div class="card-body">
-		  <h2 class="card-title">Le Orangevin</h2>
-		  <p>Populær for sine søde druer.</p>
-		  <div class="card-actions justify-end">
-			<button class="btn btn-secondary">Køb nu!</button>
-		  </div>
-		</div>
-	  </div>
+	 <ProductCard
+	 url="/singleview"
+	 cardimage="/cardimg.jpg"
+	 cardimagealt="Orange wine"
+	 cardtitel="Orangevin"
+	 cardtekst="Populær for sine søde druer"
+	 cardbuttontekst="Køb nu!"
+	 badgenyt="true"
+	 badgerabat="false"
+	 badgefaatilbage="false"
+	 ></ProductCard>
+
+	 <ProductCard
+	 url="/singleview"
+	 cardimage="/product2.jpg"
+	 cardimagealt="Summer Orange"
+	 cardtitel="Summer vin"
+	 cardtekst="Fra Østrigs varme kilder"
+	 cardbuttontekst="Køb nu!"
+	 badgenyt="false"
+	 badgerabat=""
+	 badgefaatilbage="false"
+	 ></ProductCard>
   
-	  <div class="card bg-base-100 border border-base-300 w-full shadow-sm">
-		<figure>
-		  <img src="/cardimg.jpg" alt="wine" />
-		</figure>
-		<div class="card-body">
-		  <h2 class="card-title">Le Orangevin</h2>
-		  <p>Populær for sine søde druer.</p>
-		  <div class="card-actions justify-end">
-			<button class="btn btn-secondary">Køb nu!</button>
-		  </div>
-		</div>
-	  </div>
-  
-	  <div class="card bg-base-100 border border-base-300 w-full shadow-sm">
-		<figure>
-		  <img src="/cardimg.jpg" alt="wine" />
-		</figure>
-		<div class="card-body">
-		  <h2 class="card-title">Le Orangevin</h2>
-		  <p>Populær for sine søde druer.</p>
-		  <div class="card-actions justify-end">
-			<button class="btn btn-secondary">Køb nu!</button>
-		  </div>
-		</div>
-	  </div>
-  
-	  <div class="card bg-base-100 border border-base-300 w-full shadow-sm">
-		<figure>
-		  <img src="/cardimg.jpg" alt="wine" />
-		</figure>
-		<div class="card-body">
-		  <h2 class="card-title">Le Orangevin</h2>
-		  <p>Populær for sine søde druer.</p>
-		  <div class="card-actions justify-end">
-			<button class="btn btn-secondary">Køb nu!</button>
-		  </div>
-		</div>
-	  </div>
-  
-	  <div class="card bg-base-100 border border-base-300 w-full shadow-sm">
-		<figure>
-		  <img src="/cardimg.jpg" alt="wine" />
-		</figure>
-		<div class="card-body">
-		  <h2 class="card-title">Le Orangevin</h2>
-		  <p>Populær for sine søde druer.</p>
-		  <div class="card-actions justify-end">
-			<button class="btn btn-secondary">Køb nu!</button>
-		  </div>
-		</div>
-	  </div>
-  
-	  <div class="card bg-base-100 border border-base-300 w-full shadow-sm">
-		<figure>
-		  <img src="/cardimg.jpg" alt="wine" />
-		</figure>
-		<div class="card-body">
-		  <h2 class="card-title">Le Orangevin</h2>
-		  <p>Populær for sine søde druer.</p>
-		  <div class="card-actions justify-end">
-			<button class="btn btn-secondary">Køb nu!</button>
-		  </div>
-		</div>
-	  </div>
+	 <ProductCard
+	 url="/singleview"
+	 cardimage="/product3.jpg"
+	 cardimagealt="Orange wine"
+	 cardtitel="Wine yard vin"
+	 cardtekst="Fra vingården i Hvidovre Strand"
+	 cardbuttontekst="Køb nu!"
+	 badgenyt="false"
+	 badgerabat="false"
+	 badgefaatilbage="true"
+	 ></ProductCard>
+
+	 <ProductCard
+	 url="/singleview"
+	 cardimage="/product4.jpg"
+	 cardimagealt="Orange wine"
+	 cardtitel="Bryllupsvin"
+	 cardtekst="Lad dine gæster nyde den søde drue"
+	 cardbuttontekst="Køb nu!"
+	 ></ProductCard>
+	 
 	</div>
   </section>
   
