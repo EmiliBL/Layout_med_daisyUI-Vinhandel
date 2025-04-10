@@ -6,6 +6,7 @@ import { Image } from 'astro:assets';
 import ProductCard from "../components/ProductCard.astro";
 ---
 <MainLayout title="La Oranique" class="">
+<!-- Hero -->
 <section id="hero" class="min-h-[66vh] mb-8 md:mb-24 lg:mb-32 w-full max-w-screen overflow-x-hidden">
   <div class="hero min-h-screen" style="background-image: url('/hero.jpg');">
   <div class="hero-overlay"></div>
@@ -20,7 +21,8 @@ import ProductCard from "../components/ProductCard.astro";
   </div>
 </div>
 </section>
-
+ 
+<!-- status -->
 <section id="stats" class="flex justify-center mb-8 md:mb-24 lg:mb-32">
 	<div class="stats stats-vertical lg:stats-horizontal shadow">
 		<div class="stat text-center">
@@ -43,6 +45,7 @@ import ProductCard from "../components/ProductCard.astro";
 	</div>
 </section>
 
+<!-- produkter -->
 <section id="tørstig" class="lg:mb-32 max-w-6xl ml-auto mr-auto">
 	<h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Tørstig efter en flaske?</h2>
 	<div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4 p-2">
@@ -139,7 +142,7 @@ import ProductCard from "../components/ProductCard.astro";
 	</div>
   </section>
   
-
+<!-- abonnement -->
 <section id="abonnement" class="py-4 md:py-8 mb-8 md:mb-20 lg:mb-16">
 	<div class="max-w-lg md:max-w-4xl mx-auto mb-4 px-8 md:px-4">
 	  <h2 class="text-2xl font-bold mb-6">Tørstig efter et Le Oranquie abonnement</h2>
@@ -218,6 +221,7 @@ import ProductCard from "../components/ProductCard.astro";
 	</div>
   </section>
 
+<!-- Spørgsmål -->
 <section id="spørgsmål" class="mb-8 md:mb-20 lg:mb-16">
 <div class="max-w-sm md:max-w-xl mx-auto">
 	<h2 class="text-2xl font-bold mb-6 text-center">Spørgsmål?</h2>
