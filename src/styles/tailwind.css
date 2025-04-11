@@ -8,9 +8,6 @@
 }
 
 
-
-
-
 @plugin "daisyui/theme" {
   name: "light";
   default: false;
