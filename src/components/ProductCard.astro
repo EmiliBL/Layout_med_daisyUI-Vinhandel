@@ -2,7 +2,8 @@
 /* Her henter man sine astro props, som referere til index filens props */
 const { url="#", cardimage="", cardimagealt="", badgenyt="false", badgerabat="false", 
 badgefaatilbage="false", cardtekst="", cardbuttontekst="Køb nu!", cardtitel="" } = Astro.props;
-
+import Heading from "./Heading.astro";
+import Link from "./Link.astro";
 ---
 
 <article class="card bg-base-100 border border-base-300 md:w-full sm:w-auto shadow-sm @container">
@@ -15,10 +16,10 @@ badgefaatilbage="false", cardtekst="", cardbuttontekst="Køb nu!", cardtitel="" 
         alt={cardimagealt}/>
     </figure>
     <div class="card-body p-3">
-        <h2 class="card-title">{cardtitel}</h2>
+        <Heading htmlheading="h2" size="medium" stylingclasses="card-title">{cardtitel}</h2>
         <p>{cardtekst}</p>
         <div class="card-actions justify-end">
-            <a href={url} class="btn btn-secondary hover:bg-primary">{cardbuttontekst}</a>
+            <Link href={url} class="btn btn-secondary hover:bg-primary">{cardbuttontekst}</Link>
         </div>
     </div>
 </article>

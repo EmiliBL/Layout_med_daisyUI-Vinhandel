@@ -1,0 +1,99 @@
+---
+import Heading from "../components/Heading.astro"
+import Button from "../components/Button.astro"
+import MainLayout from "../layouts/MainLayout.astro" 
+import Link from "../components/Link.astro"
+import ProductCard from "../components/ProductCard.astro"
+import Tekst from "../components/Tekst.astro"
+---
+<MainLayout>
+
+<h1 class="mb-5 text-5xl font-bold md:m-24 sm:4">komponentbibliotek</h1>
+
+<!-- Start på buttons -->
+ <h2 class="mb-5 text-5xl md:ml-24 md:mr-24 sm:4">Buttons</h2>
+ <p class="mb-5 text-xl md:ml-24 md:mr-24 sm:ml-4 italic"> Knapper bruges til at skabe aktivitet for brugeren.</p>
+
+<section class="container mx-auto m-sectiontop px-4">
+    <Heading htmlheading="h2" size="large" stylingclasses="m-sectionheading">Buttons</Heading>
+    <p><Button>Default knap</Button></p>
+    <p><Button variant="primary">Variant primary</Button></p>
+    <p><Button variant="primary" size="small">Variant primary size small</Button></p>
+    <p><Button variant="primary" size="medium">Variant primary size medium</Button></p>
+    <p><Button variant="primary" size="large">Variant primary size large</Button></p>
+    <p><Button variant="secondary" size="small">Variant secondary size small</Button></p>
+    <p><Button variant="secondary" size="medium">Variant secondary size medium</Button></p>
+    <p><Button variant="secondary" size="large">Variant secondary size large</Button></p>
+    <hr class="mt-20 border-accent">
+</section>
+<!-- slut på buttons -->
+
+<!-- Start på Link -->
+<h2 class="mb-5 text-5xl md:ml-24 md:mr-24 sm:ml-4">Link instanser</h2>
+<p class="mb-5 text-xl md:ml-24 md:mr-24 sm:ml-4 italic"> Folk bruger link forkert, så de kommer til at lave button med link. Links bruges til at hoppe i mellem links. <br> Så dette er mere rigtigt at bruge som button med link.</p>
+<section class="container mx-auto m-sectiontop px-4">
+    <Heading htmlheading="h2" size="large" stylingclasses="m-sectionheading">Links</Heading>
+
+    <p class="text-bold"><Link href="#" variant="tekstlink" size="inherit">Default link</Link></p>
+    <p><Link href="#" variant="primary">Variant primary</Link></p>
+    <p><Link href="#" variant="primary" size="small">Variant primary size small</Link></p>
+    <p><Link href="#" variant="primary" size="medium">Variant primary size medium</Link></p>
+    <p><Link href="#" variant="primary" size="large">Variant primary size large</Link></p>
+    <p><Link href="#" variant="secondary" size="small">Variant secondary size small</Link></p>
+    <p><Link href="#" variant="secondary" size="medium">Variant secondary size medium</Link></p>
+    <p><Link href="#" variant="secondary" size="large">Variant secondary size large</Link></p>
+    <hr class="mt-20 border-accent">
+</section>
+<!-- slut på Link -->
+
+<!-- start på typografi -->
+<h2 class="mb-5 text-5xl md:ml-24 md:mr-24 sm:ml-4">Heading</h2>
+<p class="mb-5 text-xl md:ml-24 md:mr-24 sm:ml-4 italic"> Semantik og størrelse følges ikke ad. </p>
+
+<section class="container mx-auto m-sectiontop px-4">
+    <Heading htmlheading="h2" size="medium" stylingclasses="m-sectionheading">Typografi</Heading>
+     
+    <Heading htmlheading="h1" size="xlarge">h1 xlarge</Heading>
+    <Heading htmlheading="h2" size="large">h2 large</Heading>
+    <Heading htmlheading="h3" size="medium">h3 medium</Heading>
+    <Heading htmlheading="h3" size="small">h4 small</Heading>
+    <p>Og her en sektion brødtekst</p>
+    <hr class="mt-20 border-accent">
+    </section>
+    <!-- slut på typografi -->
+
+<!-- start på Card -->
+<h2 class="mb-5 text-5xl md:ml-24 md:mr-24 sm:ml-4">card</h2>
+<p class="mb-5 text-xl md:ml-24 md:mr-24 sm:ml-4 italic"> card design med bagdes </p>
+
+<div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4">
+<ProductCard 
+url="/singleview"
+cardimage="/cardimg.jpg"
+cardimagealt="Orange wine"
+cardtitel="Orangevin"
+cardtekst=""
+cardbuttontekst="Køb nu!"
+badgenyt="true"
+badgerabat="false"
+badgefaatilbage="false"
+>
+</ProductCard>
+</div>
+<!-- Slut på card -->
+
+<!-- Teskt start -->
+<h2 class="mb-5 text-5xl md:ml-24 md:mr-24 sm:ml-4">Tekst</h2>
+<p class="mb-5 text-xl md:ml-24 md:mr-24 sm:ml-4 italic"> tekst elementer </p>
+<Tekst teksttype="manchet" stylingclasses="pt-8">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem doloremque commodi eaque quisquam quasi recusandae veniam. Corporis totam reiciendis quibusdam ratione iure aut, numquam tenetur voluptatem exercitationem sequi enim!
+    </Tekst>
+    <Tekst teksttype="brødtekst" stylingclasses="pt-8">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem doloremque commodi eaque quisquam quasi recusandae veniam. Corporis totam reiciendis quibusdam ratione iure aut, numquam tenetur voluptatem exercitationem sequi enim!
+    </Tekst>
+    <Tekst teksttype="konsultativ" stylingclasses="pt-4">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem doloremque commodi eaque quisquam quasi recusandae veniam. Corporis totam reiciendis quibusdam ratione iure aut, numquam tenetur voluptatem exercitationem sequi enim!
+    </Tekst>
+<!-- Teskt slut -->
+
+</MainLayout>

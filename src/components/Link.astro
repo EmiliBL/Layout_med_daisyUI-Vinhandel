@@ -1,5 +1,29 @@
 ---
-// Henter parametrene fra Astro.props
-const { href="#", target="_self"} = Astro.props; 
+//Henter parametrene fra Astro.propsconst
+/* 
+- # i href, er den by deafault linker til sig selv. 
+- target="_self", betyder linket åbner i samme vindue 
+- variant = primary, betyder at du henter hvilke variant det skal være */
+const { href = "#", target = "_self", variant = "tekstlink", size = "inherit" } = Astro.props;
+
+//Definer den styling (Tailwind classes, der gør sig gældende for alle links)
+const linkStyling = "underline hover:scale-150";
+
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
+const variantClasses = {
+    "tekstlink":"btn my-2",
+    "primary":"btn my-2 btn-primary",
+    "secondary":"btn my-2 btn-secondary"};
+
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser
+const sizeClasses = {
+    "inherit":"",
+    "large":"btn-lg",
+    "medium":"hover:bg-primary",
+    "small":"btn-sm"};
 ---
-<a href={href} class="underline" target={target}><slot /></a>
+
+<!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
+<a href={href} target={target} class:list={[linkStyling, variantClasses[variant], sizeClasses[size]]}><slot /></a>
+
+
